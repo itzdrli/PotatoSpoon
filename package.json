@@ -1,0 +1,9 @@
+{
+  "name": "PotatoSpoon",
+  "version": "0.0.1-alpha1",
+  "description": "PotatoSpoon",
+  "main": "index.js",
+  "author": "Itz_Dr_Li",
+  "license": "MIT",
+  "private": false
+}
