@@ -1,1 +1,7 @@
 [error][01-09 20:09:44]: [41mBye world![49m
+[error][01-20 21:41:40]: bad indentation of a mapping entry (1:52)
+
+ 1 |  ...  Server \nRunning flying-squid',
+-----------------------------------------^
+ 2 |  ... 
+ 3 |  ... 

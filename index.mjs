@@ -2,6 +2,7 @@ import chalk from 'chalk';
 import winston from 'winston';
 import prompts from 'prompts';
 import cliProgress  from 'cli-progress';
+import mineflayer from 'mineflayer';
 
 const logger = winston.createLogger({
   format: winston.format.combine(
@@ -14,30 +15,9 @@ const logger = winston.createLogger({
   ]
 });
 
-const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
-
-(async () => {
-  const response = await prompts({
-    type: 'number',
-    name: 'age',
-    message: 'How old are you?',
-    initial: 114,
-  });
-  if (response.age <= 18 && response.age > 0) {
-    logger.info(chalk.cyan('你好，小登'));
-  } else if (response.age <= 65 && response.age >= 13) {
-    logger.info(chalk.yellow('你好，中登'));
-  } else if (response.age <= 100 && response.age >= 65) {
-    logger.info(chalk.green('你好，老登'));
-  } else if (response.age <= 0) {
-    logger.info(chalk.bgRedBright('你好，细胞登'));
-  } else {
-    logger.info(chalk.bgRedBright('你好，老毕登'));
-  }
-  if (response.age <= 100 && response.age >= 0) {
-    bar.start(100, response.age);
-  } else {
-    bar.start(100, 100);
-  }
-  bar.stop();
-})();
+// const startServer = await prompts({
+//   type: 'confirm',
+//   name: 'value',
+//   message: 'Start server?',
+//   initial: true,
+// });
